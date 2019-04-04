@@ -2,7 +2,7 @@
 """
 This module gives some AvailSet class for constructing avail_set
 component. Also an abstract class is provided for customization. 
-Developers are suggested to extend the class `AvailSetABC` 
+Developers are suggested to extend the class ``AvailSetABC`` 
 and implements all its abstract methods.
 """
 
@@ -11,9 +11,9 @@ import abc
 
 class AvailSetABC:
     """
-    Abstract class for writing component `avail_set`.
-    Developer should implement four functions: `contain`,
-    `add` ,`pop` and `delete`.
+    Abstract class for writing component ``avail_set``. 
+    Developer should implement four functions: ``contain``, 
+    ``add`` ,``pop`` and ``delete``.
     """
     __metaclass__ = abc.ABCMeta
 

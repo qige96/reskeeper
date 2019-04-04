@@ -3,7 +3,7 @@ A lightweight management system for applying and releasing exclusive resources.
 
 ## Quickstart
 
-```
+```python
 from reskeeper import ResourceKeeper
 
 resources = [
@@ -19,13 +19,13 @@ res2 = rk.get()       # get one more resource
 res3 = rk.get()       # None, no resource available
 
 print(res1)
-print(res2)
+print(res2.res_id, res2.data)
 print(res3)
 
 rk.release(res1)     # release a resource
 
 res4 = rk.get()      # one resource available
 
-print(res4)
+print(res4.to_dict())
 
 ```

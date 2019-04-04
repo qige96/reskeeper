@@ -53,6 +53,10 @@ class ResourceKeeper:
     def __init__(self, resources=None, pool_map=None, avail_set=None):
         """
         Instanciate a resource manager
+
+        :param resources: iterable of any resources
+        :param pool_map: PoolMap instance, by default a python dict wrapper
+        :param avail_set: AvailSet instance, by default a python list wrapper
         """
         if pool_map:
             self.pool = pool_map

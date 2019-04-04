@@ -2,7 +2,7 @@
 """
 This module gives some PoolMap class for constructing pool_map
 component. Also an abstract class is provided for customization. 
-Developers are suggested to extend the class `PoolMapABC` 
+Developers are suggested to extend the class ``PoolMapABC``
 and implements all its abstract methods.
 """
 
@@ -12,9 +12,9 @@ import abc
 
 class PoolMapABC:
     """
-    Abstract class for writing component `pool_map`.
-    Developer should implement three functions: `get`,
-    `add` and `pop`
+    Abstract class for writing component ``pool_map``.
+    Developer should implement three functions: ``get``,
+    ``add`` and ``pop``
     """
     __metaclass__ =  abc.ABCMeta
 
