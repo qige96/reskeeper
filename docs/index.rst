@@ -8,7 +8,7 @@ Reskeeper
 
 A lightweight management system for applying and releasing exclusive resources.
 
-.. toctree::
+.. toctree
    :maxdepth: 2
    :caption: Contents:
 
@@ -184,17 +184,22 @@ The ``ResourceKeeper`` consist of two parts: a map that stores all
 resources, and a set that maintains all available resources(id). 
 Both the two key components can be customized by users. 
 
+Poolmaps
+++++++++++++
 When a resource was added, an id was generated and the map storage 
 maps the resource id to that resource data. By default, ``ResourceKeeper`` 
 uses a python dict wrapper as the storage map. Users can make 
 their own maps that meet their own needs, as long as their maps 
-implementing three interfaces: ``get``, ``put``, and ``delete``. The 
-three interfaces hehave the same like ``get``, ``__setitem__``, and 
+implementing three interfaces: ``get``, ``put``, and ``delete``. 
+
+The three interfaces hehave the same like ``get``, ``__setitem__``, and 
 ``__del__`` of python dict. Users are suggested to examine and extend 
 the base class ``reskeeper.poolmaps.PoolMapABC``. 
 An example is the encapsulation of sqlite3 to be a map. It can 
-be found in [`reskeeper.poolmaps.SimpleSqliteMap`](https://github.com/qige96/reskeeper/blob/master/reskeeper/poolmaps.py).
+be found in `reskeeper.poolmaps.SimpleSqliteMap <https://github.com/qige96/reskeeper/blob/master/reskeeper/poolmaps.py>`_.
 
+Availsets
++++++++++++++
 The other component is a set that maintains all ids of available 
 resources. When users call ``rk.get()`` to apply for a resource, 
 the ``avail_set`` pop out a ``res_id``, then the keeper return a copy 
@@ -202,13 +207,34 @@ of resource related to that id. When ``rk.release(res)`` is invoked,
 the keeper destroy the resource(actually the copy), and add the 
 ``res_id`` bake into ``avail_set``. Thus, an available set should 
 implements four interaces: `contains`, ``add``, ``pop`` and ``delete``. 
+
 Likewise, users are suggested to examine and extend the base class 
 ``reskeeper.availsets.AvailSetABC``. The default available set 
-adopted by ``ResourceKeeper`` is ``reskeeper.availsets.LinkedQueue`` 
+adopted by ``ResourceKeeper`` is `reskeeper.availsets.LinkedQueue <https://github.com/qige96/reskeeper/blob/master/reskeeper/availsets.py>`_ 
 which is a linked list that has some queue and set features 
 (not have same element, but in a queue order).
 
 
+API
+-------------
+
+
+Core
++++++++
+.. automodule:: reskeeper.core
+    :members:
+
+
+Poolmaps
+++++++++++
+.. automodule:: reskeeper.poolmaps
+    :members:
+
+
+Availsets
+++++++++++++
+.. automodule:: reskeeper.availsets
+    :members:
 
 .. Indices and tables
 .. ==================

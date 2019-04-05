@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-docstring
+This module contains core functionalities of Resource Keeper.
 
 """
 
