@@ -111,9 +111,7 @@ class RemoveTestCase(unittest.TestCase):
 
     def test_remove(self):
         self.keeper.pool.put(100, 100)
-        self.keeper.available.add(100)
         self.keeper.size += 1
-        self.keeper.avail_num += 1
 
         self.keeper.remove(Resource(100, 100))
         self.assertEqual(self.keeper.size, 0)

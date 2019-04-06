@@ -118,10 +118,8 @@ class ResourceKeeper:
         :param resource: Resource, the resource to be removed
         """
         try:
-            self.available.delete(resource.res_id)
             self.pool.delete(resource.res_id)
             self.size -= 1
-            self.avail_num -= 1
         except KeyError:
             raise KeyError("No resource with res_id: " + str(resource.res_id))
 

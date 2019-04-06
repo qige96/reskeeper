@@ -102,7 +102,7 @@ The ``get`` method returns a ``Resource`` object, a wrapper for the
 resource id and resource data
 ::
 
-    print(res1.res_id, res.data) # 1, {'username':'user1', 'password':123}
+    print(res1.res_id, res1.data) # 1, {'username':'user1', 'password':123}
     print(res3)                  # None
 
 

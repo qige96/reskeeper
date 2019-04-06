@@ -3,21 +3,13 @@
 from setuptools import setup
 
 
-def get_long_description(long_description_file):
-    """
-    Read long description from file.
-    """
-    with open(long_description_file, encoding="utf-8") as f:
-        long_description = f.read()
-
-    return long_description_file
-
 setup(
     name="reskeeper",
-    version=0.1,
+    version="0.1.1",
+    url="https://github.com/qige96/reskeeper",
     license="MIT",
     description="A lightweight management system for applying and releasing exclusive resources.",
-    long_description=get_long_description("README.md"),
+    long_description=open("README.md", "r", encoding="utf8").read(),
     long_description_content_type="text/markdown",
     author="Ruiqi Zhu",
     author_email="rickyzhu@foxmail.com",
