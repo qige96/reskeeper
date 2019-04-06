@@ -1,4 +1,7 @@
 # Reskeeper
+[![version](https://img.shields.io/static/v1.svg?label=version&message=0.1&color=blue)](https://github.com/qige96/reskeeper)
+[![docs](https://img.shields.io/static/v1.svg?label=docs&message=rtds&color=green)](https://reskeeper.readthedocs.io/en/latest/)
+
 A lightweight management system for applying and releasing exclusive resources.
 
 
@@ -53,3 +56,7 @@ res4 = rk.get()           # one resource available
 print(res4.to_dict())     # {'res_id': 1, 'data': 'resource1'}
 
 ```
+
+## Documentation
+
+see https://reskeeper.readthedocs.io
