@@ -7,15 +7,15 @@ A lightweight management system for applying and releasing exclusive resources.
 
 ## Introduction
 
-Considering these scenarios: you are doing web crapping that 
-requiring proxies with multi-threads, and each thread can only 
+Considering these scenarios: you are doing web scrapping that 
+requires proxies with multi-threads, and each thread can only 
 use one proxy and one proxy can only be used by one thread at 
 one time; or you are doing monkey tests for login process of 
-your several applications at one time, each application can 
+your several applications simultaneously, each application can 
 only use one test account and each account can only be used 
 by one application at one time. You will need to manage the 
 applying and releasing of these **exclusive resources**, and 
-here is this little system taht can help.
+here is this little system that can help.
 
 ## Installation
 You can install it by just one command
